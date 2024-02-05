@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: #171717;
+}
+
+#container {
+    width: auto;
+    height: 100%;
+    background-color: #171717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    position: relative;
+    overflow-y: auto;
+    padding: 25px;
+}
+
+#return {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 50px;
+}
+
+#form-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+h5 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: red;
+}
+
+p {
+    color: yellow;
+    font-size: 1.2rem;
+}
+
+input[type=text] {
+    font-size: 1.2rem;
+    text-align: justify;
+    text-justify: inter-word;
+    background-color: #171717;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: center;
+    width: 1000px;
+}
+
+input[type=submit] {
+    font-size: 1.2rem;
+    text-align: left;
+    background-color: #171717;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: center;
+    width: 1000px;
+}
+
+.genre-option {
+    width: 1000px;
+}
+
+textarea {
+    font-size: 1.2rem;
+    text-align: justify;
+    text-justify: inter-word;
+    background-color: #171717;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: justify;
+    text-justify: inter-word;
+    width: 1000px;
+    padding: 10px;
+}
+
+i {
+    color: white;
+    text-shadow: 0 0 50px black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+a:hover i {
+    color: gray;
+}

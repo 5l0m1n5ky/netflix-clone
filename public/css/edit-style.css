@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    background-color: #171717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    position: relative;
+    overflow-y: auto;
+}
+
+#return {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 50px;
+}
+
+#cover-container {
+    width: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35vw;
+    height: 25vw;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+}
+
+#info-container {
+    padding: 5px;
+    width: 900px;
+    height: 90%;
+    margin-left: 25px;
+    overflow-y: auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+h5 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: red;
+}
+
+input[type=text] {
+    font-size: 1.2rem;
+    text-align: justify;
+    text-justify: inter-word;
+    background-color: #171717;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: center;
+    width: 90%;
+}
+
+input[type=submit] {
+    font-size: 1.2rem;
+    text-align: justify;
+    text-justify: inter-word;
+    background-color: #171717;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: center;
+    width: 90%;
+}
+
+.genre-option {
+    width: 100%;
+}
+
+textarea {
+    font-size: 1.2rem;
+    text-align: justify;
+    text-justify: inter-word;
+    background-color: #171717;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: justify;
+    text-justify: inter-word;
+    width: 90%;
+    padding: 10px;
+}
+
+i {
+    color: white;
+    text-shadow: 0 0 50px black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover i {
+    color: gray;
+}
+
+p {
+    color: yellow;
+    font-size: 1.2rem;
+}

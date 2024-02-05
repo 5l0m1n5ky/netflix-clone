@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    background-color: #171717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    position: relative;
+}
+
+#return {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 50px;
+}
+
+#cover-container {
+    width: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 35vw;
+    height: 25vw;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+}
+
+#info-container {
+    padding: 25px;
+    width: 50vw;
+    margin-left: 25px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+h5 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: red;
+}
+
+h3 {
+    font-size: 1.2rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+i {
+    color: white;
+    text-shadow: 0 0 50px black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover i {
+    color: gray;
+}
+
+
+/* RATING */
+
+.slider {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 25px;
+    background: white;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: red;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: red;
+    cursor: pointer;
+}
+
+input[type=submit] {
+    color: white;
+    background-color: #171717;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#rating-space {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 35px 5px rgba(163, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 35px 5px rgba(163, 0, 0, 1);
+    box-shadow: 0px 0px 35px 5px rgba(163, 0, 0, 1);
+    width: 200px;
+}
+
+#rating-space h2 {
+    font-size: 60px;
+    color: red;
+}
