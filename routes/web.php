@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
 
 // Show main view
-Route::get('/index', [ViewController::class, 'index'])->name('index');
+Route::get('/', [ViewController::class, 'index']);
 
 // Show play view
 Route::get('/play/{movie}', [ViewController::class, 'play'])->name('play');

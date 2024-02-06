@@ -12,7 +12,7 @@
 
 <body>
     <div id="container">
-        <a id="return" href="{{ url('index') }}"><i class="bi bi-arrow-return-left"></i></a>
+        <a id="return" href="/"><i class="bi bi-arrow-return-left"></i></a>
         <div id="rating-space">
             <h3>OCENA</h3>
             <h2> @php

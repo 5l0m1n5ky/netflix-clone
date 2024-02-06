@@ -9,7 +9,7 @@ class ViewTest extends TestCase
 
     public function test_the_application_returns_a_successful_index_response(): void
     {
-        $response = $this->get('/index');
+        $response = $this->get('/');
 
         $response->assertStatus(200);
     }

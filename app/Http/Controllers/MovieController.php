@@ -22,7 +22,7 @@ class MovieController extends Controller
 
         $movie->genres()->sync($request->genre);
 
-        return redirect(url('index'));
+        return redirect('/');
     }
 
     public function update(UpdateRequest $request, Movie $movie)
