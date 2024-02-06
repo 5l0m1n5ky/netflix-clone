@@ -9,12 +9,17 @@ class Genre extends Model
 {
     use HasFactory;
 
-    protected $table = "genre";
+    protected $casts = [
+        'genre' => 'string',
+    ];
 
-    protected $fillable = ['id', 'genre'];
 
-    public function movies()
+    protected $table = "genres";
+
+    protected $fillable = ['genre'];
+
+    public function movies(): object
     {
-        return $this->belongsToMany(Movie::class, 'movie_genre', 'genre_id', 'movie_id');
+        return $this->belongsToMany(Movie::class, 'genre_movie', 'genre_id', 'movie_id')->withTimestamps();
     }
 }

@@ -13,7 +13,7 @@
 <body>
     <div id="main-container">
         <div id="header">
-            <form action="/">
+            <form action="{{ url('index') }}">
                 <input type="text" id="text-field" name="search" placeholder="Szukaj...">
                 <button type="submit"><i class="bi bi-search"></i></button>
             </form>

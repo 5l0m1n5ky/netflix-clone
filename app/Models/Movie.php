@@ -9,21 +9,29 @@ class Movie extends Model
 {
     use HasFactory;
 
-    protected $table = "movie";
+    protected $casts = [
+        'title' => 'string',
+        'cover' => 'string',
+        'description' => 'string',
+        'production' => 'string',
+        'media_path' => 'string'
+    ];
 
-    protected $fillable = ['id', 'title', 'cover', 'description', 'production', 'media_path'];
+    protected $table = "movies";
+
+    protected $fillable = ['title', 'cover', 'description', 'production', 'media_path'];
 
     public function scopeFilter($query)
     {
         $query->where('title', 'like', '%' . request('search') . '%');
     }
 
-    public function genres()
+    public function genres(): object
     {
-        return $this->belongsToMany(Genre::class, 'movie_genre', 'movie_id', 'genre_id');
+        return $this->belongsToMany(Genre::class, 'genre_movie', 'movie_id', 'genre_id')->withTimestamps();
     }
 
-    public function ratings()
+    public function ratings(): object
     {
         return $this->hasMany(Rating::class);
     }

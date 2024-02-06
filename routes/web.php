@@ -1,33 +1,33 @@
 <?php
 
+use App\Http\Controllers\MovieController;
+use App\Http\Controllers\RatingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+// Show main view
+Route::get('/index', [ViewController::class, 'index'])->name('index');
 
-Route::get('/', [ViewController::class, 'index']);
+// Show play view
+Route::get('/play/{movie}', [ViewController::class, 'play'])->name('play');
 
-Route::get('/play/{movie}', [ViewController::class, 'play']);
+// Show info view
+Route::get('/info/{movie}', [ViewController::class, 'info'])->name('info');
 
-Route::get('/showInfo/{movie}', [ViewController::class, 'info']);
+// Show create view
+Route::get('/create', [ViewController::class, 'create'])->name('create');
 
-Route::get('/editMovie/{movie}', [ViewController::class, 'edit']);
+// Store new movie
+Route::post('/store', [MovieController::class, 'store'])->name('store');
 
-Route::get('/delete/{movie}', [ViewController::class, 'delete']);
+// Show edit movie view
+Route::get('/edit/{movie}', [ViewController::class, 'edit'])->name('edit');
 
-Route::put('/edit/{movie}', [ViewController::class, 'editData']);
+// Update existing movie
+Route::put('/update/{movie}', [MovieController::class, 'update'])->name('update');
 
-Route::get('/createMovie', [ViewController::class, 'createMovie']);
+// Delete existing movie
+Route::get('/delete/{movie}', [MovieController::class, 'destroy'])->name('delete');
 
-Route::post('/create', [ViewController::class, 'create']);
-
-Route::post('/submitRating/{movie}', [ViewController::class, 'rating']);
+// Submit rating
+Route::post('/submitRating/{movie}', [RatingController::class, 'rating'])->name('submitRating');

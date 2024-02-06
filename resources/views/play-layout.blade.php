@@ -12,8 +12,8 @@
 
 <body>
     <div id="container">
-        <a href="/"><i class="bi bi-arrow-return-left"></i></a>
-        <video controls autoplay loop src="{{ asset($movie_path) }}"></video>
+        <a href="{{ url('index') }}"><i class="bi bi-arrow-return-left"></i></a>
+        <video controls autoplay loop src="{{ asset('storage/' . $movie_path) }}"></video>
     </div>
 </body>
 

@@ -12,7 +12,7 @@
 
 <body>
     <div id="container">
-        <a id="return" href="/"><i class="bi bi-arrow-return-left"></i></a>
+        <a id="return" href="{{ url('index') }}"><i class="bi bi-arrow-return-left"></i></a>
         <div id="rating-space">
             <h3>OCENA</h3>
             <h2> @php
@@ -26,8 +26,9 @@
             @endphp </h2>
         </div>
         <div id="cover-container">
-            <img src="{{ asset($movie->cover) }}" alt="">
-            <div id="overlay"><a href="/play/{{ $movie->id }}"><i class="bi bi-play-circle-fill"></i></a></div>
+            <img src="{{ asset('storage/' . $movie->cover) }}" alt="">
+            <div id="overlay"><a href="{{ url('play', [$movie->id]) }}  "><i class="bi bi-play-circle-fill"></i></a>
+            </div>
         </div>
         <div id="info-container">
             <h5>TYTUŁ</h5>
@@ -42,7 +43,7 @@
             <h3>{{ $movie->production }}</h3>
             <h5>OCEŃ FILM W SKALI 1-5</h5>
 
-            <form action="/submitRating/{{ $movie->id }}" method="POST">
+            <form action="{{ url('submitRating', [$movie->id]) }}" method="POST">
                 @csrf
                 @method('POST')
                 <input type="range" min="1" max="5" step="1" value="5" class="slider"

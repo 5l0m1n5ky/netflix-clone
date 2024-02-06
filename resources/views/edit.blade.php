@@ -12,13 +12,17 @@
 
 <body>
     <div id="container">
-        <a id="return" href="/"><i class="bi bi-arrow-return-left"></i></a>
+        <a id="return" href="{{ url('index') }}"><i class="bi bi-arrow-return-left"></i></a>
         <div id="cover-container">
-            <img src="{{ asset($movie->cover) }}" alt="">
-            <div id="overlay"><a href="/play/{{ $movie->id }}"><i class="bi bi-play-circle-fill"></i></a></div>
+            <img src="{{ asset('storage/' . $movie->cover) }}" alt="">
+            <div id="overlay">
+                <a href="{{ url('play', [$movie->id]) }}  }}">
+                    <i class="bi bi-play-circle-fill"></i>
+                </a>
+            </div>
         </div>
         <div id="info-container">
-            <form method="POST" enctype="multipart/form-data" action="/edit/{{ $movie->id }}">
+            <form method="POST" enctype="multipart/form-data" action="{{ url('update', [$movie->id]) }}">
                 @csrf
                 @method('PUT')
                 <h5>TYTUŁ</h5>
@@ -30,10 +34,8 @@
                         @php
                             if (in_array($genre->genre, $movieGenres)) {
                                 echo '<input type="checkbox" name="genre[]" value="' . $genre->id . '" checked/>';
-                                // echo '<input type="checkbox" name="genre[]" value="' . {{ $genre->id }} . '" checked/>';
                             } else {
                                 echo '<input type="checkbox" name="genre[]" value="' . $genre->id . '"/>';
-                                // echo '<input type="checkbox" name="genre[]" value="' . {{ $genre->id }} . '"/>';
                         } @endphp
                         <label for="genre[]">{{ $genre->genre }}</label>
                     </div>
